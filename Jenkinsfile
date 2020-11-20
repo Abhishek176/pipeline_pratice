@@ -1,6 +1,6 @@
 node {
     stage('Parameterize') {
-        git url: 'ssh://git@code.dtcc.com:7999/cpe/ccoe-remediation-app.git',branch: "release/ec2-backup-cleanup-1"
+        git url: 'ssh://https://github.com/Abhishek176/pipeline_pratice.git',branch: "main"
         script{
             sh 'python read_data.py'
         }
