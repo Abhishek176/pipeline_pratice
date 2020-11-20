@@ -1,6 +1,6 @@
 node {
     stage('Parameterize') {
-        git url: 'ssh://https://github.com/Abhishek176/test.git',branch: "main"
+        git branch: 'main', url: 'https://github.com/Abhishek176/test.git'
         script{
             sh 'python read_data.py'
         }
