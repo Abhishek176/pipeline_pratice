@@ -1,0 +1,29 @@
+import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Read-JSON') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Abhishek176/pipeline_pratice.git'
+                script {
+                    String inputFile = '/var/lib/jenkins/workspace/testpy/data1.json'
+                    String fileContents = new File(inputFile).getText('UTF-8')
+                     
+                    def jsonSlurper = new JsonSlurper()
+                    def jsonObject = jsonSlurper.parseText(fileContents)
+                    // println "JSONObject : " + jsonObject
+                    // println JsonOutput.prettyPrint(fileContents)
+                    println (jsonObject.aws_accounts['environment'])
+                    println (jsonObject.aws_accounts['acc_id'])
+                    
+                    properties([[$class: 'RebuildSettings', autoRebuild: false, rebuildDisabled: false], parameters([[$class: 'ChoiceParameter', choiceType: 'PT_SINGLE_SELECT', description: '', filterLength: 1, filterable: false, name: 'env', randomName: 'choice-parameter-24790274819807', script: [$class: 'GroovyScript', fallbackScript: [classpath: [], sandbox: false, script: '''return[
+\'error\'
+]'''], script: [classpath: [], sandbox: false, script: '''return["${jsonObject.aws_accounts['environment']}"]''']]]])])
+                }
+            }
+        }
+    }
+}
