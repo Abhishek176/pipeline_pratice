@@ -1,0 +1,28 @@
+{
+    "aws_accounts" : [
+        {
+           "acc_id": "255482788127"
+           "category": "Core",
+           "environment": "Dev",
+           "alias": "rsk0418q"
+        },
+       {
+           "acc_id": "355482788127"
+           "category": "Core",
+           "environment": "qa",
+           "alias": "rsk0418q"
+       },
+       {
+           "acc_id": "455482788127"
+           "category": "Core",
+           "environment": "Dev",
+           "alias": "rsk0418q"
+       },
+       {
+           "acc_id": "555482788127"
+           "category": "Core",
+           "environment": "qa",
+           "alias": "rsk0418q"
+       }
+    ]
+}    
