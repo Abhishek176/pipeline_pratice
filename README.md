@@ -28,4 +28,24 @@ Set to true to display results of the remediation plan without taking any action
 
 # AutoTagger
 
+#### branch
+```branch
+Enter the git branch name
+```
+#### account
+```account
+Enter account number
+```
+#### region
+```region
+Enter Region
+```
+#### command
+```command
+Select the specific remediation command
+```
+#### preview
+```preview
+Set to true to display results of the remediation plan without taking any action.
+```
 # EC2_Volume_Remediation
