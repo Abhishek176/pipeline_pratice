@@ -4,11 +4,17 @@
 ```branch
 Enter the git branch name
 ```
-### account
-### region
-### scope
-### command
-### preview
+#### account
+```account
+Enter account number
+```
+#### region
+````region
+Enter Region
+```
+#### scope
+#### command
+#### preview
 
 # AutoTagger
 
