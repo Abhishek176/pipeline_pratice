@@ -8,8 +8,8 @@
 - Click on configure
 - Goto pipeline section of the job
 - Select pipeline script from SCM from the dropdown list
-- In SCM dropdown select the Git
-- In Repository section provide the Repository URL where you have your jenkins and provide the credentials in order to access the repository and git branch name
+- In SCM dropdown list select the Git
+- In Repository section provide the Repository URL where you have your jenkins file and provide the credentials in order to access the repository and git branch name
 - In the script path section provide your jenkins file name
 - Then click on apply and save
 
